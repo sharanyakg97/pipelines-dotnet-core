@@ -28,10 +28,15 @@ steps:
     nobuild: true
     versioningScheme: 'off'
 
-- task: NuGetCommand@2
+- task: PowerShell@2
   inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: 'a37867b6-426c-4eaa-a860-369136c21af0/885f3815-a47b-49d6-8a02-80b13b83f522'
-    allowPackageConflicts: true
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Hello World"
+      dir
+    workingDirectory: '$(Build.ArtifactStagingDirectory)'
+
+
+
