@@ -32,9 +32,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host "Hello World"
+      cd $(Build.ArtifactStagingDirectory)
       dir
     workingDirectory: '$(Build.ArtifactStagingDirectory)'
 
