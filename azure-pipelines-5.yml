@@ -21,3 +21,5 @@ jobs:
       deploy:
         steps:
         - script: echo my first deployment
+        - script: mkdir app
+        - script: echo hello>>test.txt
