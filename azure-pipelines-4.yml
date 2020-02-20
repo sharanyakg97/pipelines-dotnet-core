@@ -48,6 +48,15 @@ steps:
       dir
     workingDirectory: '$(Build.ArtifactStagingDirectory)'
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(System.DefaultWorkingDirectory)/**/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'a37867b6-426c-4eaa-a860-369136c21af0/885f3815-a47b-49d6-8a02-80b13b83f522'
+
+
+
 
 
 
