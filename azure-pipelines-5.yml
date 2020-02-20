@@ -22,6 +22,6 @@ jobs:
         steps:
         - script: echo my first deployment
         - script: cd
-        - script: mkdir app
+        - script: mkdir app1
         - script: echo hello>>test.txt
 
